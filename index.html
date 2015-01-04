@@ -840,6 +840,40 @@ There is a request limit of 50, use the offset param to get next</p>
 <td>The amount of points to add to the user (Use negative to remove)</td>
 </tr>
 </tbody></table>
+<h1 id='errors'>Errors</h1><h2 id='status-codes'>Status Codes</h2>
+<table><thead>
+<tr>
+<th>Status Code</th>
+<th>Title</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>Something went wrong with the server, you should get in contact with Terence Bezman immediately.</td>
+<td>The server ran out of ram</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>You weren&rsquo;t signed in or you need to have a higher role on the server.</td>
+<td>The request requires an admin and you are a user</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>The server wasn&rsquo;t able to complete the request due to a conflict.</td>
+<td>You were making an account and the username was already taken.</td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>The server was able to complete your request with out any problems and has returned the information.</td>
+<td>Nothing went wrong.</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
