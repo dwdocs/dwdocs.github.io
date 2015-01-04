@@ -255,8 +255,76 @@
   The user must be signed in for this to work, doesn&rsquo;t matter what role they are.
 </aside></p>
 
-<p><code class="prettyprint">POST /userrole</code></p>
-<h3 id='query-parameters'>Query Parameters</h3><h1 id='games'>Games</h1><h2 id='get-all-games'>Get all games</h2><pre><code class="highlight javascript">
+<p><code class="prettyprint">GET /userrole</code></p>
+<h3 id='query-parameters'>Query Parameters</h3><h2 id='username-taken'>Username Taken</h2><pre><code class="highlight javascript">
+  <span class="k">return</span> <span class="nx">$http</span><span class="p">({</span>
+    <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">"/usernametaken"</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">usename</span><span class="p">:</span> <span class="s2">"not real username here"</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+</code></pre>
+
+<p>Returns either true or false based on whether or not that username is taken in the database</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>NONE</td>
+<td>The username that you are checking in the database</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>The above command returns a message structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="w">  </span><span class="kc">false</span><span class="w">
+</span></code></pre>
+
+<p><code class="prettyprint">GET /usernametaken</code></p>
+<h2 id='email-taken'>Email Taken</h2><pre><code class="highlight javascript">
+  <span class="k">return</span> <span class="nx">$http</span><span class="p">({</span>
+    <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">"/emailtaken"</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">email</span><span class="p">:</span> <span class="s2">"not real email here"</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+</code></pre>
+
+<p>Returns either true or false based on whether or not that email is taken in the database</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>NONE</td>
+<td>The email that you are checking in the database</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>The above command returns a message structured like this:</p>
+</blockquote>
+<pre><code class="highlight json"><span class="w">  </span><span class="kc">false</span><span class="w">
+</span></code></pre>
+
+<p><code class="prettyprint">GET /emailtaken</code></p>
+<h1 id='games'>Games</h1><h2 id='get-all-games'>Get all games</h2><pre><code class="highlight javascript">
     <span class="k">return</span> <span class="nx">$http</span><span class="p">({</span>
       <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
       <span class="na">url</span><span class="p">:</span> <span class="s2">"/games"</span><span class="p">,</span>
